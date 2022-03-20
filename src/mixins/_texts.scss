@@ -1,0 +1,101 @@
+// ====== HEADER START ======
+@mixin header-title {
+  font-size: 35px;
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+@mixin nav-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+// ====== HEADER END ======
+
+// ====== ASIDE START ======
+@mixin aside-title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #00a4e5;
+}
+
+@mixin aside-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 23px;
+  color: #48555b;
+}
+
+// ====== ASIDE END ======
+
+// ====== CONTENT START ======
+
+@mixin content-category-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+
+// ====== CONTENT END ======
+
+// ====== FOOTER START ======
+
+@mixin footer-title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@mixin footer-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+@mixin footer-links-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 0.846154px;
+}
+
+@mixin footer-copy-text {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.846154px;
+  color: #ffffff;
+}
+
+// ====== FOOTER END ======

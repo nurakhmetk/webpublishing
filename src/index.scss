@@ -1,0 +1,16 @@
+@use 'fonts';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Opens Sans-Regular';
+  font-size: 13px;
+  color: #48555b;
+}

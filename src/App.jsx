@@ -1,0 +1,16 @@
+import Footer from './ components/Footer/Footer';
+import Header from './ components/Header/Header';
+import Main from './ components/Main/Main';
+import cl from './App.module.scss';
+
+function App() {
+  return (
+    <div className={cl.wrapper}>
+      <Header />
+      <Main />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
