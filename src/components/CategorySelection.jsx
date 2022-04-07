@@ -11,7 +11,7 @@ const CategorySelection = ({ categories }) => {
         categories.map((item) => (
           <section className={cl.category} key={item.id}>
             <p className={cl.categoryText}>
-              <Link to={item.link} key={item.id}>
+              <Link to={'/' + item.link} key={item.id}>
                 {item.name}
               </Link>
             </p>

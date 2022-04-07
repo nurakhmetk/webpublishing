@@ -25,7 +25,7 @@ const Home = ({ news }) => {
         const id = uniqid();
         return (
           <Route
-            path={res.link}
+            path={'/' + res.link}
             element={<ArticlePage data={res} key={id} />}
             key={res.id}
           />

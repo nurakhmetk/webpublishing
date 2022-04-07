@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from '../styles/Article.module.scss';
 
-const Article = ({ title, image, link }) => {
+const Article = ({ title, image }) => {
   return (
     <article className={cl.articles}>
       <p className={cl.title}>{title}</p>
