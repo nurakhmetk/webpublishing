@@ -1,5 +1,7 @@
 # Website Preview
 
+I am currently refactoring the code.
+
 Homepage, the page you see first
 
 ![Website Preview](screenshots/homepage.png 'Homepage, the page you see first')
