@@ -1,0 +1,164 @@
+@import './mixins/texts';
+@import 'fonts';
+.header {
+  background-color: #141a20;
+  height: 60px;
+  .container {
+    max-width: 83%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: 1240px) {
+      max-width: 88%;
+    }
+    @media only screen and (max-width: 1030px) {
+      max-width: 92%;
+    }
+    @media only screen and (max-width: 820px) {
+      max-width: 94%;
+    }
+    @media only screen and (max-width: 650px) {
+      max-width: 95%;
+    }
+    .title {
+      @include header-title(35px, 5px);
+      span {
+        color: #00a4e5;
+      }
+    }
+    .navigation {
+      width: 300px;
+      @media only screen and (max-width: 1200px) {
+        width: 270px;
+      }
+      @media only screen and (max-width: 820px) {
+        display: none;
+      }
+      .navList {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-between;
+        position: relative;
+        .navText {
+          display: flex;
+          align-items: center;
+          @include nav-text(15px, 600);
+          line-height: 16px;
+          cursor: pointer;
+          position: relative;
+          &::after {
+            content: '';
+            display: block;
+            background-color: #00a4e5;
+            height: 3.5px;
+            border-radius: 1px;
+            left: 0;
+            position: absolute;
+            transform-origin: left;
+            margin: 40px 0 0 0;
+            animation-name: reversess;
+            animation-duration: 0.5s;
+          }
+          &:hover::after {
+            animation-name: underlined;
+            animation-duration: 0.5s;
+            width: 100%;
+          }
+          &:link,
+          &:visited,
+          &:active {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        @keyframes underlined {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+        @keyframes reversess {
+          from {
+            width: 100%;
+          }
+          to {
+            width: 0%;
+          }
+        }
+      }
+
+      .iconNotActive {
+        margin-left: 5px;
+        width: 10px;
+        height: 10px;
+        transition: all 0.4s ease;
+      }
+      .iconActive {
+        margin-left: 5px;
+        width: 10px;
+        height: 10px;
+        transform: rotateZ(180deg);
+        transition: all 0.2s ease;
+      }
+    }
+    .burgerMenu {
+      z-index: 100;
+      width: 40px;
+      height: 30px;
+
+      @media all and (max-width: 1280px) {
+        width: 35px;
+        height: 25px;
+      }
+
+      @media all and (min-width: 820px) {
+        display: none;
+      }
+
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .burgerLine {
+        width: 40px;
+        height: 4.29px;
+        background-color: #00a4e5;
+        transition: all 0.4s ease;
+      }
+    }
+    .burgerMenuActive {
+      z-index: 100;
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      @media all and (min-width: 820px) {
+        display: none;
+      }
+      .burgerLine {
+        width: 40px;
+        height: 4.29px;
+        background-color: #00a4e5;
+        transition: all 0.4s ease;
+      }
+      .burgerLine:last-child {
+        opacity: 0;
+      }
+      .burgerLine:first-child {
+        transform: rotate(45deg) translate(9px, 9px);
+      }
+      .burgerLine:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@use 'fonts';
+@import './mixins/texts';
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(-100%);
+  @media all and (min-width: 390px) and (max-width: 428px) {
+    transform: translateX(-200%);
+  }
+  @media all and (min-width: 820px) {
+    display: none;
+  }
+  .blur {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(4px) brightness(40%);
+    position: absolute;
+    z-index: 20;
+  }
+  .navigation {
+    max-width: 1440px;
+    height: 60px;
+  }
+  .menuContent {
+    z-index: 10;
+    width: 447px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    ul li a {
+      // @include menu-text(68px);
+      color: #000;
+      @media all and (min-width: 1280px) {
+        // @include menu-text(58px);
+      }
+    }
+    ul li a:link,
+    ul li a:visited {
+      text-decoration: none;
+    }
+    ul li a:active,
+    ul li a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    ul {
+      list-style-type: none;
+    }
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    li:nth-last-child(1) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.menuActive {
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(0);
+  @media all and (min-width: 820px) {
+    display: none;
+  }
+  .blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.89);
+  }
+  .navigation {
+    max-width: 1440px;
+    height: 60px;
+  }
+  .menuContent {
+    z-index: 10;
+    width: 447px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @media all and (min-width: 1280px) {
+      margin-top: auto;
+    }
+    .navText {
+      display: flex;
+      align-items: center;
+      @include nav-text(50px, 800);
+      cursor: pointer;
+      position: relative;
+      border-bottom: 1px solid rgb(197, 197, 197);
+      &::after {
+        content: '';
+        display: block;
+        background-color: #00a4e5;
+        height: 3.5px;
+        border-radius: 1px;
+        left: 0;
+        position: absolute;
+        transform-origin: left;
+        margin: 40px 0 0 0;
+        animation-name: reversess;
+        animation-duration: 0.5s;
+      }
+      &:hover::after {
+        animation-name: underlined;
+        animation-duration: 0.5s;
+        width: 100%;
+      }
+      &:link,
+      &:visited,
+      &:active {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    @keyframes underlined {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes reversess {
+      from {
+        width: 100%;
+      }
+      to {
+        width: 0%;
+      }
+    }
+  }
+}

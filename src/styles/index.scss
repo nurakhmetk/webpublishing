@@ -1,0 +1,23 @@
+@use 'fonts';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// body {
+//   font-family: 'Opens Sans';
+//   color: #48555b;
+// }

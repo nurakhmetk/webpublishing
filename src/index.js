@@ -1,14 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { createRoot } from 'react-dom/client';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import './index.scss';
+import './styles/index.scss';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store, { persistor } from './redux/reducers/index';
+import { PersistGate } from 'redux-persist/integration/react';
+import Spin from './components/Spin';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'));
+
+root.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <PersistGate loading={<Spin />} persistor={persistor}>
+        <App />
+      </PersistGate>
+    </Provider>
+  </BrowserRouter>
 );
 
 reportWebVitals();

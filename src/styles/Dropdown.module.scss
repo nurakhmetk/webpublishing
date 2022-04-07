@@ -1,0 +1,35 @@
+@import './mixins/texts';
+@import 'fonts';
+.dropdownActive {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 130px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: translateY(37%);
+  background-color: #fff;
+  border: 1px solid #000;
+  list-style: none;
+  z-index: 999;
+  padding: 5px;
+  .item {
+    @include nav-dropdown-text;
+    border-bottom: 1px solid #a8a8a8;
+    padding-bottom: 5px;
+    color: #161616;
+    a:link,
+    a:visited,
+    a:active {
+      color: #161616;
+      text-decoration: none;
+    }
+  }
+}
+
+.dropdownNotActive {
+  transform: translateY(-200%);
+  position: absolute;
+}

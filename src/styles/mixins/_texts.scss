@@ -1,0 +1,247 @@
+// ====== HEADER START ======
+@mixin header-title($fz, $let-sp) {
+  font-size: $fz;
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  letter-spacing: $let-sp;
+  color: #fff;
+}
+
+@mixin nav-text($fz, $fw) {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: $fw;
+  font-size: $fz;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@mixin nav-dropdown-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  color: #161616;
+  text-decoration: none;
+}
+
+// ====== HEADER END ======
+
+// ====== ASIDE START ======
+@mixin aside-title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #00a4e5;
+}
+
+@mixin aside-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 23px;
+  color: #48555b;
+}
+
+// ====== ASIDE END ======
+
+// ====== CONTENT START ======
+
+@mixin content-category-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+
+@mixin content-prevBtn-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+// ====== CONTENT END ======
+
+// ====== SINGLE PAGE POST START ======
+
+@mixin spp-title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 32px;
+  color: #48555b;
+}
+
+@mixin spp-author {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #48555b;
+}
+
+@mixin spp-publish {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #48555b;
+}
+
+@mixin spp-descr {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #48555b;
+}
+
+@mixin spp-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #48555b;
+  letter-spacing: 1px;
+}
+
+@mixin spp-url-text {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: #48555b;
+}
+
+// ====== SINGLE PAGE POST END ======
+
+// ====== POSTS START ======
+
+@mixin posts-article-title($fz) {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: $fz;
+  line-height: 24px;
+  color: #48555b;
+}
+
+@mixin posts-article-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: #48555b;
+}
+
+@mixin posts-author-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 23px;
+  color: #48555b;
+}
+
+// ====== POSTS END ======
+
+// ====== FOOTER START ======
+
+@mixin footer-title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@mixin footer-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+@mixin footer-links-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 0.846154px;
+}
+
+@mixin footer-copy-text {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.846154px;
+  color: #ffffff;
+}
+
+// ====== FOOTER END ======
+
+// ====== ABOUT START ======
+
+@mixin about-title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  letter-spacing: 0.846154px;
+  color: #000;
+}
+
+@mixin about-h3 {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.846154px;
+  color: #000;
+}
+
+@mixin about-subtitle {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.846154px;
+  color: #000;
+}
+
+@mixin about-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.846154px;
+  color: #000;
+}
+
+// ====== ABOUT END ======

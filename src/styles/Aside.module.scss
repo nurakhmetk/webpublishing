@@ -1,0 +1,46 @@
+@import './mixins/texts';
+@import 'fonts';
+.aside {
+  width: 25%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding-top: 45px;
+
+  @media only screen and (max-width: 920px) {
+    display: none;
+  }
+  .body {
+    cursor: pointer;
+    height: auto;
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 30px;
+    box-shadow: rgba(27, 27, 27, 0.1) 0px 2px 4px,
+      rgba(27, 27, 27, 0.2) 0px 2px 4px, rgba(27, 27, 27, 0.1) 0px 0px 4px;
+    .adv {
+      width: 100%;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .title {
+      margin-top: 10px;
+      @include aside-title;
+    }
+    .text {
+      margin-top: 10px;
+      @include aside-text;
+    }
+  }
+}
