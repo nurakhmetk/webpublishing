@@ -14,18 +14,6 @@
     padding: 20px 0px;
     position: relative;
 
-    .content {
-      width: 74%;
-      @media only screen and (max-width: 920px) {
-        width: 100%;
-      }
-      @media only screen and (max-width: 650px) {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-    }
     @media only screen and (max-width: 1240px) {
       max-width: 88%;
     }
@@ -37,6 +25,19 @@
     }
     @media only screen and (max-width: 650px) {
       max-width: 100%;
+    }
+
+    .content {
+      width: 74%;
+      @media only screen and (max-width: 920px) {
+        width: 100%;
+      }
+      @media only screen and (max-width: 650px) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
   }
 }

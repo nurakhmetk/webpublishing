@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import * as Scroll from 'react-scroll';
 import cl from '../styles/Menu.module.scss';
+const ScrollLink = Scroll.Link;
 
 const Menu = ({ menuActive, setMenuActive, isActive, setIsActive }) => {
   return (
@@ -22,9 +24,16 @@ const Menu = ({ menuActive, setMenuActive, isActive, setIsActive }) => {
         <Link to='/sportsnews' className={cl.navText}>
           Sports News
         </Link>
-        <Link to='/contacts' className={cl.navText}>
+        <ScrollLink
+          to='footer'
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={900}
+          className={cl.navText}
+        >
           Contacts
-        </Link>
+        </ScrollLink>
         <Link to='/about' className={cl.navText}>
           About
         </Link>
