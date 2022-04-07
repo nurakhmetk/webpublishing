@@ -100,9 +100,9 @@ const Footer = () => {
       <div className={cl.copyright}>
         <div className={cl.copyContainer}>
           <p className={cl.copyText}>
-            This site was created for educational material. It is not Link
-            commercial application. All coincidences are coincidental. Designed
-            and Made by Nurakhmet Kairat
+            This is not a commercial project, the site was developed for
+            educational purposes. All rights to materials belong to copyright
+            holders.
           </p>
         </div>
       </div>
