@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/nurakhmetk.github.io/webpublishing-on-react/static/css/main.48d9ea34.css",
-    "main.js": "/nurakhmetk.github.io/webpublishing-on-react/static/js/main.f9871d23.js",
-    "static/js/787.5fb0d84d.chunk.js": "/nurakhmetk.github.io/webpublishing-on-react/static/js/787.5fb0d84d.chunk.js",
-    "static/media/OpenSans-ExtraBold.ttf": "/nurakhmetk.github.io/webpublishing-on-react/static/media/OpenSans-ExtraBold.312244ca5ea57843f749.ttf",
-    "static/media/OpenSans-Regular.ttf": "/nurakhmetk.github.io/webpublishing-on-react/static/media/OpenSans-Regular.d7d7b8359eeb9cddfba6.ttf",
-    "static/media/OpenSans-Bold.ttf": "/nurakhmetk.github.io/webpublishing-on-react/static/media/OpenSans-Bold.6e27168fc8a5a200a026.ttf",
-    "static/media/OpenSans-SemiBold.ttf": "/nurakhmetk.github.io/webpublishing-on-react/static/media/OpenSans-SemiBold.d7261533b9a545ddc769.ttf",
-    "static/media/adv.jpg": "/nurakhmetk.github.io/webpublishing-on-react/static/media/adv.affe7cf9425ae24e481f.jpg",
-    "static/media/BebasNeue-Regular.ttf": "/nurakhmetk.github.io/webpublishing-on-react/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
-    "index.html": "/nurakhmetk.github.io/webpublishing-on-react/index.html",
-    "static/media/arrownew.svg": "/nurakhmetk.github.io/webpublishing-on-react/static/media/arrownew.d4e0430376c86479b3a31e870e009807.svg",
-    "main.48d9ea34.css.map": "/nurakhmetk.github.io/webpublishing-on-react/static/css/main.48d9ea34.css.map",
-    "main.f9871d23.js.map": "/nurakhmetk.github.io/webpublishing-on-react/static/js/main.f9871d23.js.map",
-    "787.5fb0d84d.chunk.js.map": "/nurakhmetk.github.io/webpublishing-on-react/static/js/787.5fb0d84d.chunk.js.map"
+    "main.css": "/webpublishing-on-react/static/css/main.7722884a.css",
+    "main.js": "/webpublishing-on-react/static/js/main.b2829b1b.js",
+    "static/js/787.5fb0d84d.chunk.js": "/webpublishing-on-react/static/js/787.5fb0d84d.chunk.js",
+    "static/media/OpenSans-ExtraBold.ttf": "/webpublishing-on-react/static/media/OpenSans-ExtraBold.312244ca5ea57843f749.ttf",
+    "static/media/OpenSans-Regular.ttf": "/webpublishing-on-react/static/media/OpenSans-Regular.d7d7b8359eeb9cddfba6.ttf",
+    "static/media/OpenSans-Bold.ttf": "/webpublishing-on-react/static/media/OpenSans-Bold.6e27168fc8a5a200a026.ttf",
+    "static/media/OpenSans-SemiBold.ttf": "/webpublishing-on-react/static/media/OpenSans-SemiBold.d7261533b9a545ddc769.ttf",
+    "static/media/adv.jpg": "/webpublishing-on-react/static/media/adv.affe7cf9425ae24e481f.jpg",
+    "static/media/BebasNeue-Regular.ttf": "/webpublishing-on-react/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
+    "index.html": "/webpublishing-on-react/index.html",
+    "static/media/arrownew.svg": "/webpublishing-on-react/static/media/arrownew.d4e0430376c86479b3a31e870e009807.svg",
+    "main.7722884a.css.map": "/webpublishing-on-react/static/css/main.7722884a.css.map",
+    "main.b2829b1b.js.map": "/webpublishing-on-react/static/js/main.b2829b1b.js.map",
+    "787.5fb0d84d.chunk.js.map": "/webpublishing-on-react/static/js/787.5fb0d84d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48d9ea34.css",
-    "static/js/main.f9871d23.js"
+    "static/css/main.7722884a.css",
+    "static/js/main.b2829b1b.js"
   ]
 }
