@@ -21,5 +21,5 @@ Dropdown menu, you can go to the category you want from any page of the site.
 - HTML
 - SCSS
 - React JS
-- Redux, Redux-Thunk, React-Redux
+- Redux, Redux-Thunk, Redux-Persist, React-Redux
 - Axios
