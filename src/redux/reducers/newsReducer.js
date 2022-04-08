@@ -28,7 +28,6 @@ const initalState = {
 };
 
 export const newsReducer = (state = initalState, action) => {
-  console.log(action);
   switch (action.type) {
     case SORT_NEWS:
       const ArrayOfObjects = action.data.map((item) => {
