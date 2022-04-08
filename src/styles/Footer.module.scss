@@ -51,6 +51,9 @@
       @media only screen and (max-width: 650px) {
         @include footer-text(16px, 23px);
       }
+      @media only screen and (max-width: 390px) {
+        // padding-left: 20px;
+      }
     }
     .company {
       width: 30%;
@@ -89,18 +92,34 @@
         height: auto;
         width: 50%;
       }
+      @media only screen and (max-width: 390px) {
+        padding-left: 40px;
+      }
+
       .title {
         width: 100%;
       }
       .linksBody {
         display: flex;
+        @media only screen and (max-width: 390px) {
+          flex-direction: column;
+        }
         ul {
           width: 33%;
           list-style: none;
+          @media only screen and (max-width: 390px) {
+            width: auto;
+            margin-bottom: 10px;
+          }
           a:link,
           a:visited,
           a:active {
             color: #fff;
+          }
+          li {
+            @media only screen and (max-width: 390px) {
+              margin-bottom: 3px;
+            }
           }
           .linkItem {
             color: #fff;
@@ -137,6 +156,9 @@
         width: 50%;
         height: auto;
       }
+      @media only screen and (max-width: 390px) {
+        padding-left: 40px;
+      }
       .socialBody {
         display: flex;
         justify-content: space-between;
@@ -146,6 +168,9 @@
         @media only screen and (max-width: 650px) {
           flex-direction: row;
           width: 60%;
+        }
+        @media only screen and (max-width: 390px) {
+          width: 90%;
         }
       }
     }
