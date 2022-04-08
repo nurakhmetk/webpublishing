@@ -14,9 +14,9 @@ const root = createRoot(document.getElementById('root'));
 root.render(
   <HashRouter>
     <Provider store={store}>
-      {/* <PersistGate loading={<Spin />} persistor={persistor}> */}
-      <App />
-      {/* </PersistGate> */}
+      <PersistGate loading={<Spin />} persistor={persistor}>
+        <App />
+      </PersistGate>
     </Provider>
   </HashRouter>
 );
