@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 const CategoryPage = (props) => {
   const { category } = useParams();
 
-  const news = useSelector((state) => state.newsReducer.newsByCategory);
+  const news = useSelector((state) => state.news.newsByCategory);
 
   const categoryName = category.slice(0, -4);
 
