@@ -121,8 +121,10 @@
         position: absolute;
         transform-origin: left;
         margin: 40px 0 0 0;
-        animation-name: reversess;
         animation-duration: 0.5s;
+        @media only screen and (max-width: 650px) {
+          margin: 45px 0 0 0;
+        }
       }
       &:hover::after {
         animation-name: underlined;
@@ -142,14 +144,6 @@
       }
       to {
         width: 100%;
-      }
-    }
-    @keyframes reversess {
-      from {
-        width: 100%;
-      }
-      to {
-        width: 0%;
       }
     }
   }

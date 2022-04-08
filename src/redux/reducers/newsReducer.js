@@ -73,7 +73,7 @@ export const newsReducer = (state = initalState, action) => {
         return allNews;
       });
 
-      const arrFromObj = [...Object.values(state.newsByCategory ?? {})];
+      const arrFromObj = JSON.parse(JSON.stringify(state.newsByCategory));
 
       const twoNews = ArrayOfObjects.map((item) => item.slice(0, 2));
 

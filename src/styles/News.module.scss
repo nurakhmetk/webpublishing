@@ -60,7 +60,7 @@
           cursor: pointer;
           @include content-category-text(20px);
           @media only screen and (max-width: 650px) {
-            padding: 0 20px;
+            margin-left: 20px;
             margin-bottom: 15px;
             @include content-category-text(28px);
           }
@@ -68,13 +68,16 @@
             content: '';
             width: 3px;
             height: 20px;
-            background-color: #48555b;
+            background-color: #00a4e5;
             margin-right: 5px;
+            @media only screen and (max-width: 650px) {
+              height: 24px;
+            }
           }
           &:link,
           &:visited,
           &:active {
-            color: #48555b;
+            color: #161616;
             text-decoration: none;
           }
           position: relative;
@@ -90,6 +93,9 @@
             transform-origin: left;
             animation-name: reversess;
             animation-duration: 0.3s;
+            @media only screen and (max-width: 650px) {
+              left: 0px;
+            }
           }
           &:hover::after {
             animation-name: underlined;

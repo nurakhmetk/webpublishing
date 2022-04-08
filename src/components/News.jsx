@@ -12,9 +12,6 @@ import uniqid from 'uniqid';
 const News = () => {
   const news = useSelector((state) => state.newsReducer.newsByCategory);
 
-  const isEmpty = Object.keys(news).length === 0;
-  console.log(isEmpty);
-
   return (
     <main className={cl.news} id='news'>
       <div className={cl.container}>
