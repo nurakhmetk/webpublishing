@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
-import cl from '../styles/Menu.module.scss';
+import cl from '../../styles/Menu.module.scss';
 const ScrollLink = Scroll.Link;
 
 const Menu = ({ menuActive, setMenuActive, isActive, setIsActive }) => {

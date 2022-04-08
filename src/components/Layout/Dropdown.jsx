@@ -1,6 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import cl from '../styles/Dropdown.module.scss';
+import { NavLink } from 'react-router-dom';
+import cl from '../../styles/Dropdown.module.scss';
+
+const setActive = ({ isActive }) => (isActive ? cl.textActive : cl.text);
+
 const Dropdown = ({ isActive, setIsActive }) => {
   const CloseDropdown = () => {
     setIsActive(!isActive);
@@ -12,19 +15,19 @@ const Dropdown = ({ isActive, setIsActive }) => {
       onClick={(e) => e.preventDefault()}
     >
       <div className={cl.item}>
-        <Link to='/generalnews' onClick={CloseDropdown}>
+        <NavLink to='generalnews' onClick={CloseDropdown} className={setActive}>
           General News
-        </Link>
+        </NavLink>
       </div>
       <div className={cl.item}>
-        <Link to='/technews' onClick={CloseDropdown}>
+        <NavLink to='technews' onClick={CloseDropdown} className={setActive}>
           Tech News
-        </Link>
+        </NavLink>
       </div>
       <div className={cl.item}>
-        <Link to='/sportsnews' onClick={CloseDropdown}>
+        <NavLink to='sportsnews' onClick={CloseDropdown} className={setActive}>
           Sports News
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

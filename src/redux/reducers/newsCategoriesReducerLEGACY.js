@@ -4,27 +4,28 @@ import uniqid from 'uniqid';
 const initalState = {
   categories: [
     {
-      name: 'Generalica',
+      name: 'General',
       id: 1,
-      link: '/generalnews',
+      link: 'generalnews',
       news: [],
     },
     {
       name: 'Technologies',
       id: 2,
-      link: '/technews',
+      link: 'technews',
       news: [],
     },
     {
       name: 'Sports',
       id: 3,
-      link: '/sportsnews',
+      link: 'sportsnews',
       news: [],
     },
   ],
 };
 
 export const newsCategoriesReducer = (state = initalState, action) => {
+  console.log('newsCategoriesReducer >>>', action);
   switch (action.type) {
     case NEWS_CATEGORIES:
       const ArrayOfObjects = action.data.map((item) => {
@@ -59,11 +60,11 @@ export const newsCategoriesReducer = (state = initalState, action) => {
             description: res.description,
             url: res.url,
             imageUrl: res.urlToImage,
+            text: res.content,
             publishDate,
             date,
             time,
-            text: res.content,
-            link: link,
+            link,
             id,
           };
         });

@@ -3,25 +3,36 @@ import cl from '../styles/CategoryPage.module.scss';
 import { Link } from 'react-router-dom';
 import Article from './Article';
 import uniqid from 'uniqid';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-const CategoryPage = ({ categoryName, uniqKey, uniqKeyPost, news }) => {
+const CategoryPage = (props) => {
+  const { categoryname, articlelink } = useParams();
+
+  const news = useSelector((state) => state.newsReducer.newsByCategory);
+
   return (
-    <div className={cl.categoryPage} key={uniqKey}>
+    <div className={cl.categoryPage}>
       <div className={cl.categoryHeader}>
         <p className={cl.categoryPageText}>
-          {categoryName} News Around The World
+          {categoryname} News Around The World
         </p>
       </div>
       <div className={cl.gridContainer}>
-        {news.length &&
-          news.map((item) => {
-            const id = uniqid();
-            return (
-              <Link to={'/' + item.link} key={id}>
-                <Article title={item.title} image={item.imageUrl} key={id} />
-              </Link>
-            );
-          })}
+        {news.map((item) => {
+          const posts =
+            item.link === categoryname
+              ? item.allNews.map((res) => {
+                  const id = uniqid();
+                  return (
+                    <Link to={`${res.id}`} key={id}>
+                      <Article title={res.title} image={res.imageUrl} />
+                    </Link>
+                  );
+                })
+              : null;
+          return posts;
+        })}
       </div>
     </div>
   );

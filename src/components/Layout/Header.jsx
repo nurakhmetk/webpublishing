@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
-import cl from '../styles/Header.module.scss';
-import arrow from '../image/icons/arrownew.svg';
+import cl from '../../styles/Header.module.scss';
+import arrow from '../../image/icons/arrownew.svg';
 import Dropdown from './Dropdown';
 import Menu from './Menu';
 
@@ -40,18 +40,34 @@ const Header = ({ news }) => {
         </Link>
         <nav className={cl.navigation} ref={ref}>
           <div className={cl.navList}>
-            <Link to='/' className={cl.navText}>
+            <NavLink
+              to='/'
+              className={({ isActive }) =>
+                isActive ? cl.navTextActive : cl.navText
+              }
+            >
               Home
-            </Link>
-            <div className={cl.navText} onClick={(e) => setIsActive(!isActive)}>
+            </NavLink>
+            <NavLink
+              to='/news'
+              className={({ isActive }) =>
+                isActive ? cl.navTextActive : cl.navText
+              }
+            >
+              News
+            </NavLink>
+            {/* <div
+              className={cl.newsSelection}
+              onClick={() => setIsActive(!isActive)}
+            >
               News
               <img
                 src={arrow}
                 alt=''
                 className={isActive ? cl.iconActive : cl.iconNotActive}
               />
-            </div>
-            <Dropdown isActive={isActive} setIsActive={setIsActive} />
+            </div> */}
+            {/* <Dropdown isActive={isActive} setIsActive={setIsActive} /> */}
             {/* selected={selected} setSelected={setSelected}  */}
             {/* <Link to='/contacts' className={cl.navText}>
               Contacts
@@ -66,9 +82,14 @@ const Header = ({ news }) => {
             >
               Contacts
             </ScrollLink>
-            <Link to='/about' className={cl.navText}>
+            <NavLink
+              to='/about'
+              className={({ isActive }) =>
+                isActive ? cl.navTextActive : cl.navText
+              }
+            >
               About
-            </Link>
+            </NavLink>
           </div>
         </nav>
         <div

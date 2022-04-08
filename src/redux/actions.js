@@ -5,7 +5,7 @@ import {
   FETCH_SPORTS_NEWS,
   LOADER_DISPLAY_ON,
   LOADER_DISPLAY_OFF,
-  NEWS_CATEGORIES,
+  SORT_NEWS,
 } from './types';
 
 export const fetchNews = () => {
@@ -42,11 +42,11 @@ export const fetchNews = () => {
       });
 
       dispatch({
-        type: NEWS_CATEGORIES,
+        type: SORT_NEWS,
         data: [
-          generalNewsData.slice(0, 2),
-          techNewsData.slice(0, 2),
-          sportsNewsData.slice(0, 2),
+          generalNewsData.slice(),
+          techNewsData.slice(),
+          sportsNewsData.slice(),
         ],
       });
 

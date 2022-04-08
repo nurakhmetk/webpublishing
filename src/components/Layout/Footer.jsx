@@ -1,8 +1,8 @@
 import React from 'react';
-import cl from '../styles/Footer.module.scss';
-import email from '../image/email.png';
-import facebook from '../image/facebook.png';
-import twitter from '../image/twitter.png';
+import cl from '../../styles/Footer.module.scss';
+import email from '../../image/email.png';
+import facebook from '../../image/facebook.png';
+import twitter from '../../image/twitter.png';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
