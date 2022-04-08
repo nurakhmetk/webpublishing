@@ -28,6 +28,7 @@ const initalState = {
 };
 
 export const newsReducer = (state = initalState, action) => {
+  console.log(action);
   switch (action.type) {
     case SORT_NEWS:
       const ArrayOfObjects = action.data.map((item) => {
@@ -73,7 +74,8 @@ export const newsReducer = (state = initalState, action) => {
         return allNews;
       });
 
-      const arrFromObj = [...Object.values(state.newsByCategory)];
+      const arrFromObj = [...Object.values(state.newsByCategory ?? {})];
+
       const twoNews = ArrayOfObjects.map((item) => item.slice(0, 2));
 
       const structuredData = arrFromObj.map((item, index) => {

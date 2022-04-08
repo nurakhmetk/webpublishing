@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import './styles/index.scss';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store, { persistor } from './redux/reducers/index';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -12,13 +12,13 @@ import Spin from './components/Spin';
 const root = createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Provider store={store}>
-      <PersistGate loading={<Spin />} persistor={persistor}>
-        <App />
-      </PersistGate>
+      {/* <PersistGate loading={<Spin />} persistor={persistor}> */}
+      <App />
+      {/* </PersistGate> */}
     </Provider>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 reportWebVitals();
