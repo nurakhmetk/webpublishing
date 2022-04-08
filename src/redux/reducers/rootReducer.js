@@ -3,8 +3,8 @@ import { newsReducer } from './newsReducer';
 import { appReducer } from './appReducer';
 
 const rootReducer = combineReducers({
-  newsReducer,
-  appReducer,
+  news: newsReducer,
+  app: appReducer,
 });
 
 export default rootReducer;

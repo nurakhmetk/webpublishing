@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 const SingleArticlePage = () => {
   const { category, articlelink } = useParams();
 
-  const news = useSelector((state) => state.newsReducer.newsByCategory);
+  const news = useSelector((state) => state.news.newsByCategory);
 
   const checkedNews = news.find((item) => item.link === category);
   const article = checkedNews.allNews.find((res) => res.id === articlelink);

@@ -10,7 +10,7 @@ import CategorySelection from './CategorySelection';
 import uniqid from 'uniqid';
 
 const News = () => {
-  const news = useSelector((state) => state.newsReducer.newsByCategory);
+  const news = useSelector((state) => state.news.newsByCategory);
 
   return (
     <main className={cl.news} id='news'>

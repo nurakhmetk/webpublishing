@@ -32,7 +32,7 @@ const Layout = () => {
     menuActive ? setMenuActive(false) : setMenuActive(true);
   };
 
-  const isLoading = useSelector((state) => state.appReducer.loading);
+  const isLoading = useSelector((state) => state.app.loading);
 
   return (
     <>

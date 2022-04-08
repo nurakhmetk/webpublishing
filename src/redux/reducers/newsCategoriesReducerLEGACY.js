@@ -1,37 +1,35 @@
-import { FETCH_NEWS } from '../types';
+import { NEWS_CATEGORIES } from '../types';
 import uniqid from 'uniqid';
 
 const initalState = {
-  newsByCategory: [
+  categories: [
     {
       name: 'General',
       id: 1,
       link: 'generalnews',
-      allNews: [],
-      twoNews: [],
+      news: [],
     },
     {
       name: 'Technologies',
       id: 2,
       link: 'technews',
-      allNews: [],
-      twoNews: [],
+      news: [],
     },
     {
       name: 'Sports',
       id: 3,
       link: 'sportsnews',
-      allNews: [],
-      twoNews: [],
+      news: [],
     },
   ],
 };
 
-export const newsReducer = (state = initalState, action) => {
+export const newsCategoriesReducer = (state = initalState, action) => {
+  console.log('newsCategoriesReducer >>>', action);
   switch (action.type) {
-    case FETCH_NEWS:
+    case NEWS_CATEGORIES:
       const ArrayOfObjects = action.data.map((item) => {
-        const allNews = item.map((res) => {
+        const news = item.map((res) => {
           const id = uniqid();
           const link =
             res.title
@@ -70,24 +68,21 @@ export const newsReducer = (state = initalState, action) => {
             id,
           };
         });
-        return allNews;
+        return news;
       });
 
-      const arrFromObj = JSON.parse(JSON.stringify(state.newsByCategory));
-
-      const twoNews = ArrayOfObjects.map((item) => item.slice(0, 2));
+      const arrFromObj = [...Object.values(state.categories)];
 
       const structuredData = arrFromObj.map((item, index) => {
         return {
           name: item.name,
           id: item.id,
           link: item.link,
-          allNews: ArrayOfObjects[index],
-          twoNews: twoNews[index],
+          news: ArrayOfObjects[index],
         };
       });
 
-      return { ...state, newsByCategory: structuredData };
+      return { ...state, categories: structuredData };
     default:
       return state;
   }

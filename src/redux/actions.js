@@ -5,7 +5,7 @@ import {
   FETCH_SPORTS_NEWS,
   LOADER_DISPLAY_ON,
   LOADER_DISPLAY_OFF,
-  SORT_NEWS,
+  FETCH_NEWS,
 } from './types';
 
 export const fetchNews = () => {
@@ -26,23 +26,23 @@ export const fetchNews = () => {
       const techNewsData = techNewsResponse.data.articles;
       const sportsNewsData = sportsNewsResponse.data.articles;
 
-      dispatch({
-        type: FETCH_GENERAL_NEWS,
-        data: generalNewsData,
-      });
+      // dispatch({
+      //   type: FETCH_GENERAL_NEWS,
+      //   data: generalNewsData,
+      // });
+
+      // dispatch({
+      //   type: FETCH_TECH_NEWS,
+      //   data: techNewsData,
+      // });
+
+      // dispatch({
+      //   type: FETCH_SPORTS_NEWS,
+      //   data: sportsNewsData,
+      // });
 
       dispatch({
-        type: FETCH_TECH_NEWS,
-        data: techNewsData,
-      });
-
-      dispatch({
-        type: FETCH_SPORTS_NEWS,
-        data: sportsNewsData,
-      });
-
-      dispatch({
-        type: SORT_NEWS,
+        type: FETCH_NEWS,
         data: [
           generalNewsData.slice(),
           techNewsData.slice(),

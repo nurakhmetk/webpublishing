@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react';
-import News from './News';
-import Home from './Home';
+import News from './components/News';
+import Home from './components/Home';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { fetchNews } from '../redux/actions';
+import { fetchNews } from './redux/actions';
 
-import Spin from './Spin';
-import Layout from './Layout/Layout';
-import About from './About';
-import NoMatch from './NoMatch';
-import CategoryPage from './CategoryPage';
-import { SingleArticlePage } from './SingleArticlePage';
+import Spin from './components/Spin';
+import Layout from './components/Layout/Layout';
+import About from './components/About';
+import NoMatch from './components/NoMatch';
+import CategoryPage from './components/CategoryPage';
+import { SingleArticlePage } from './components/SingleArticlePage';
 
 const App = () => {
   const dispatch = useDispatch();
 
-  const isLoading = useSelector((state) => state.appReducer.loading);
+  const isLoading = useSelector((state) => state.app.loading);
 
   useEffect(() => {
     dispatch(fetchNews());
