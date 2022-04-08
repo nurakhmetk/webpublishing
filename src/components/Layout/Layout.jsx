@@ -5,6 +5,8 @@ import cl from '../../styles/Layout.module.scss';
 
 import Header from './Header';
 import Footer from './Footer';
+import { useSelector } from 'react-redux';
+import Spin from '../Spin';
 
 const Layout = () => {
   const [isActive, setIsActive] = useState(false);
@@ -29,6 +31,8 @@ const Layout = () => {
     setMenuActive(!menuActive);
     menuActive ? setMenuActive(false) : setMenuActive(true);
   };
+
+  const isLoading = useSelector((state) => state.appReducer.loading);
 
   return (
     <>

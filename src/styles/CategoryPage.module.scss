@@ -5,15 +5,12 @@
   height: 100%;
   padding-top: 20px;
   @media only screen and (max-width: 650px) {
-    padding: 0 20px;
   }
   .gridContainer {
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, minmax(9%, 1fr));
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-rows: repeat(auto-fit, minmax(9%, 400px));
     gap: 1em 1em;
     @media only screen and (max-width: 1240px) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -32,11 +29,12 @@
     align-items: center;
     margin-bottom: 20px;
     .categoryPageText {
-      width: 50%;
-      height: 20px;
+      width: 100%;
+      text-transform: capitalize;
+      padding-left: 2.5%;
       display: flex;
       align-items: center;
-      @include content-category-text;
+      @include content-category-text(20px);
     }
   }
 }

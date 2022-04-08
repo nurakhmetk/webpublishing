@@ -15,14 +15,8 @@ const Menu = ({ menuActive, setMenuActive, isActive, setIsActive }) => {
         <Link to='/' className={cl.navText}>
           Home
         </Link>
-        <Link to='/generalnews' className={cl.navText}>
-          General News
-        </Link>
-        <Link to='/technews' className={cl.navText}>
-          Techno News
-        </Link>
-        <Link to='/sportsnews' className={cl.navText}>
-          Sports News
+        <Link to='/news' className={cl.navText}>
+          News
         </Link>
         <ScrollLink
           to='footer'

@@ -11,25 +11,30 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media only screen and (max-width: 650px) {
-    justify-content: space-around;
-  }
   background-color: #fff;
   box-shadow: rgba(27, 27, 27, 0.1) 0px 2px 4px,
     rgba(27, 27, 27, 0.2) 0px 2px 4px, rgba(27, 27, 27, 0.1) 0px 0px 4px;
 
   padding: 15px 20px;
+
+  @media only screen and (max-width: 650px) {
+    justify-content: space-around;
+  }
+  @media only screen and (max-width: 650px) {
+    width: 95%;
+  }
+  @media only screen and (max-width: 650px) {
+    padding: 5px 2.5%;
+    // margin: 0 auto;
+    width: 100%;
+  }
+
   &:hover {
     cursor: pointer;
     transform: scale(101%);
     transition: all ease-in-out 0.1s;
   }
   transition: all ease-in-out 0.1s;
-
-  @media only screen and (max-width: 650px) {
-    width: 100%;
-    margin-bottom: 20px;
-  }
 
   .title {
     @include posts-article-title(22px);
@@ -42,6 +47,9 @@ a {
     }
     @media only screen and (max-width: 768px) {
       @include posts-article-title(17px);
+    }
+    @media only screen and (max-width: 650px) {
+      margin-bottom: 0;
     }
     &:hover {
       color: #00a4e5;

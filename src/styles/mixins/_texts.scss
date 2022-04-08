@@ -54,13 +54,14 @@
 
 // ====== CONTENT START ======
 
-@mixin content-category-text {
+@mixin content-category-text($fz) {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: $fz;
   line-height: 25px;
   letter-spacing: 0.5px;
+  color: #161616;
 }
 
 @mixin content-prevBtn-text {
@@ -75,11 +76,11 @@
 
 // ====== SINGLE PAGE POST START ======
 
-@mixin spp-title {
+@mixin spp-title($fz) {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 800;
-  font-size: 30px;
+  font-size: $fz;
   line-height: 32px;
   color: #48555b;
 }
@@ -138,7 +139,7 @@
   font-weight: bold;
   font-size: $fz;
   line-height: 24px;
-  color: #48555b;
+  color: #161616;
 }
 
 @mixin posts-article-text {
@@ -245,3 +246,15 @@
 }
 
 // ====== ABOUT END ======
+
+// ====== NOMATCH START ======
+
+@mixin nomatch-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.846154px;
+  color: #000;
+}
+// ====== NOMATCH END ======

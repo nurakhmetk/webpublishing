@@ -27,12 +27,11 @@ const App = () => {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='news' element={<News />} />
-          <Route path='news/:categoryname' element={<CategoryPage />} />
+          <Route path='news/:category' element={<CategoryPage />} />
           <Route
-            path='news/:categoryname/:articlelink'
+            path='news/:category/:articlelink'
             element={<SingleArticlePage />}
           />
-
           <Route path='about' element={<About />} />
           <Route path='*' element={<NoMatch />} />
         </Route>

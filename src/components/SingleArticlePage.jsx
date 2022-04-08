@@ -6,16 +6,16 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const SingleArticlePage = () => {
-  const { categoryname, articlelink } = useParams();
+  const { category, articlelink } = useParams();
 
   const news = useSelector((state) => state.newsReducer.newsByCategory);
 
-  const checkedNews = news.find((item) => item.link === categoryname);
-  const article = checkedNews.allNews.find((e) => e.id === articlelink);
+  const checkedNews = news.find((item) => item.link === category);
+  const article = checkedNews.allNews.find((res) => res.id === articlelink);
 
   return (
     <div className={cl.singlePage}>
-      <h1>{article.title}</h1>
+      <h1 className={cl.title}>{article.title}</h1>
       <address className={cl.author}>
         By: <span>{article.author}</span>
       </address>

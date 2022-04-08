@@ -7,21 +7,23 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const CategoryPage = (props) => {
-  const { categoryname, articlelink } = useParams();
+  const { category } = useParams();
 
   const news = useSelector((state) => state.newsReducer.newsByCategory);
+
+  const categoryName = category.slice(0, -4);
 
   return (
     <div className={cl.categoryPage}>
       <div className={cl.categoryHeader}>
         <p className={cl.categoryPageText}>
-          {categoryname} News Around The World
+          {categoryName} News Around The World
         </p>
       </div>
       <div className={cl.gridContainer}>
         {news.map((item) => {
           const posts =
-            item.link === categoryname
+            item.link === category
               ? item.allNews.map((res) => {
                   const id = uniqid();
                   return (

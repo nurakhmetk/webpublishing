@@ -32,7 +32,7 @@
   .menuContent {
     z-index: 10;
     width: 447px;
-    height: 500px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@
   .menuContent {
     z-index: 10;
     width: 447px;
-    height: 450px;
+    height: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +107,7 @@
     .navText {
       display: flex;
       align-items: center;
-      @include nav-text(50px, 800);
+      @include nav-text(40px, 800);
       cursor: pointer;
       position: relative;
       border-bottom: 1px solid rgb(197, 197, 197);

@@ -6,7 +6,12 @@ const NoMatch = () => {
   return (
     <div className={cl.nomatch}>
       <div className={cl.container}>
-        This page doesn't exist. Go - <Link to='/'> Home</Link>
+        <p className={cl.text}>
+          Ooops! This page doesn't exist. Go to&nbsp;
+          <Link to='/' className={cl.link}>
+            Homepage
+          </Link>
+        </p>
       </div>
     </div>
   );

@@ -11,9 +11,12 @@
   @media only screen and (max-width: 650px) {
     width: 95%;
   }
-  h1 {
-    @include spp-title;
+  .title {
+    @include spp-title(30px);
     margin-bottom: 15px;
+    @media only screen and (max-width: 650px) {
+      @include spp-title(24px);
+    }
   }
   .author {
     @include spp-author;

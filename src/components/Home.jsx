@@ -5,6 +5,7 @@ import cl from '../styles/Home.module.scss';
 import Article from './Article';
 import CategorySelection from './CategorySelection';
 import uniqid from 'uniqid';
+import Spin from './Spin';
 
 const Home = () => {
   const news = useSelector((state) => state.newsReducer.newsByCategory);

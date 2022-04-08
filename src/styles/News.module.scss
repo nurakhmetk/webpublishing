@@ -58,10 +58,11 @@
           align-items: center;
           margin-bottom: 20px;
           cursor: pointer;
-          @include content-category-text;
+          @include content-category-text(20px);
           @media only screen and (max-width: 650px) {
             padding: 0 20px;
             margin-bottom: 15px;
+            @include content-category-text(28px);
           }
           &::before {
             content: '';
