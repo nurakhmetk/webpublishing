@@ -1,12 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import Link from 'react-scroll/modules/components/Link';
 import cl from '../styles/Home.module.scss';
+import Article from './Article';
+import CategorySelection from './CategorySelection';
+import uniqid from 'uniqid';
 
 const Home = () => {
+  const news = useSelector((state) => state.newsReducer.newsByCategory);
   return (
-    <div className={cl.about}>
+    <div className={cl.home}>
       <div className={cl.container}>
         <div className={cl.body}>
-          <h1 className={cl.title}>About Our Team</h1>
+          <h1 className={cl.title}>Welcome to Webpublishing</h1>
+          <h2 className={cl.subtitle}>
+            Go to News section if you want to read the news.{' '}
+          </h2>
           <h3 className={cl.h3}>Lorem ipsum dolor sit amet.</h3>
           <div className={cl.imagecontainer}>
             <img

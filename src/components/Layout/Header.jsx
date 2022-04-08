@@ -56,22 +56,6 @@ const Header = ({ news }) => {
             >
               News
             </NavLink>
-            {/* <div
-              className={cl.newsSelection}
-              onClick={() => setIsActive(!isActive)}
-            >
-              News
-              <img
-                src={arrow}
-                alt=''
-                className={isActive ? cl.iconActive : cl.iconNotActive}
-              />
-            </div> */}
-            {/* <Dropdown isActive={isActive} setIsActive={setIsActive} /> */}
-            {/* selected={selected} setSelected={setSelected}  */}
-            {/* <Link to='/contacts' className={cl.navText}>
-              Contacts
-            </Link> */}
             <ScrollLink
               to='footer'
               spy={true}
