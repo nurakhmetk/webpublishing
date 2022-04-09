@@ -14,8 +14,10 @@
   .title {
     @include spp-title(30px);
     margin-bottom: 15px;
+    width: 70%;
     @media only screen and (max-width: 650px) {
       @include spp-title(24px);
+      width: 100%;
     }
   }
   .author {
@@ -43,6 +45,10 @@
   .description {
     @include spp-descr;
     margin-bottom: 20px;
+    width: 80%;
+    @media only screen and (max-width: 650px) {
+      width: 100%;
+    }
   }
   .textContent {
     @include spp-text;

@@ -60,7 +60,7 @@
           cursor: pointer;
           @include content-category-text(20px);
           @media only screen and (max-width: 650px) {
-            margin-left: 20px;
+            padding-left: 2.5%;
             margin-bottom: 15px;
             @include content-category-text(28px);
           }
