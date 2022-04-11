@@ -14,10 +14,6 @@ Single Page, the page with the news of your choice.
 
 ![Website Preview](screenshots/single-page.png 'Single Page, the page with the news of your choice.')
 
-Dropdown menu, you can go to the category you want from any page of the site.
-
-![Website Preview](screenshots/chosen-category.png 'Dropdown menu, you can go to the category you want from any page of the site.')
-
 ## Used Technologies
 
 - HTML
