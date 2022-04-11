@@ -1,11 +1,8 @@
 import postsApi from '../apis/postsApi';
 import {
-  FETCH_GENERAL_NEWS,
-  FETCH_TECH_NEWS,
-  FETCH_SPORTS_NEWS,
   LOADER_DISPLAY_ON,
   LOADER_DISPLAY_OFF,
-  FETCH_NEWS,
+  FETCH_AND_SORT_NEWS,
 } from './types';
 
 export const fetchNews = () => {
@@ -26,23 +23,8 @@ export const fetchNews = () => {
       const techNewsData = techNewsResponse.data.articles;
       const sportsNewsData = sportsNewsResponse.data.articles;
 
-      // dispatch({
-      //   type: FETCH_GENERAL_NEWS,
-      //   data: generalNewsData,
-      // });
-
-      // dispatch({
-      //   type: FETCH_TECH_NEWS,
-      //   data: techNewsData,
-      // });
-
-      // dispatch({
-      //   type: FETCH_SPORTS_NEWS,
-      //   data: sportsNewsData,
-      // });
-
       dispatch({
-        type: FETCH_NEWS,
+        type: FETCH_AND_SORT_NEWS,
         data: [
           generalNewsData.slice(),
           techNewsData.slice(),

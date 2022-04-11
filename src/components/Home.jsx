@@ -1,14 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import Link from 'react-scroll/modules/components/Link';
+
 import cl from '../styles/Home.module.scss';
-import Article from './Article';
-import CategorySelection from './CategorySelection';
-import uniqid from 'uniqid';
-import Spin from './Spin';
 
 const Home = () => {
-  const news = useSelector((state) => state.news.newsByCategory);
   return (
     <div className={cl.home}>
       <div className={cl.container}>

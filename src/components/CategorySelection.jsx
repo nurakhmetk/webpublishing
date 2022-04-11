@@ -14,7 +14,7 @@ const CategorySelection = ({ item }) => {
       {item.twoNews.map((res) => {
         const id = uniqid();
         return (
-          <Link to={`${item.link}/${res.id}`} key={id}>
+          <Link to={`${item.link}/${res.link}`} key={id}>
             <Article title={res.title} image={res.imageUrl} />
           </Link>
         );

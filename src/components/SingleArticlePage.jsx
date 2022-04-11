@@ -7,11 +7,15 @@ import { useSelector } from 'react-redux';
 
 const SingleArticlePage = () => {
   const { category, articlelink } = useParams();
+  console.log('category >>', category);
+  console.log('articlelink >>', articlelink);
 
   const news = useSelector((state) => state.news.newsByCategory);
 
   const checkedNews = news.find((item) => item.link === category);
-  const article = checkedNews.allNews.find((res) => res.id === articlelink);
+  const article = checkedNews.categoryAllNews.find(
+    (res) => res.link === articlelink
+  );
 
   return (
     <div className={cl.singlePage}>

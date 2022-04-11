@@ -1,37 +1,37 @@
-import { FETCH_NEWS } from '../types';
+import { FETCH_AND_SORT_NEWS } from '../types';
 import uniqid from 'uniqid';
 
-const initalState = {
+const initialState = {
   newsByCategory: [
     {
       name: 'General',
       id: 1,
       link: 'generalnews',
-      allNews: [],
+      categoryAllNews: [],
       twoNews: [],
     },
     {
       name: 'Technologies',
       id: 2,
       link: 'technews',
-      allNews: [],
+      categoryAllNews: [],
       twoNews: [],
     },
     {
       name: 'Sports',
       id: 3,
       link: 'sportsnews',
-      allNews: [],
+      categoryAllNews: [],
       twoNews: [],
     },
   ],
 };
 
-export const newsReducer = (state = initalState, action) => {
+export const newsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_NEWS:
+    case FETCH_AND_SORT_NEWS:
       const ArrayOfObjects = action.data.map((item) => {
-        const allNews = item.map((res) => {
+        const categoryAllNews = item.map((res) => {
           const id = uniqid();
           const link =
             res.title
@@ -39,7 +39,7 @@ export const newsReducer = (state = initalState, action) => {
               .replace(/\s/g, '')
               .replace(/[^a-z]/g, '') +
             '-' +
-            res.publishedAt.replace(/:/g, '').replace(/[^0-9]/g, '/');
+            res.publishedAt.replace(/:/g, '').replace(/[^0-9]/g, '');
           const publishDate = res.publishedAt
             .replace('Z', '')
             .replace('T', '')
@@ -70,7 +70,7 @@ export const newsReducer = (state = initalState, action) => {
             id,
           };
         });
-        return allNews;
+        return categoryAllNews;
       });
 
       const arrFromObj = JSON.parse(JSON.stringify(state.newsByCategory));
@@ -82,7 +82,7 @@ export const newsReducer = (state = initalState, action) => {
           name: item.name,
           id: item.id,
           link: item.link,
-          allNews: ArrayOfObjects[index],
+          categoryAllNews: ArrayOfObjects[index],
           twoNews: twoNews[index],
         };
       });

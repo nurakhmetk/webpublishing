@@ -1,17 +1,25 @@
 import React from 'react';
-import cl from '../styles/CategoryPage.module.scss';
 import { Link } from 'react-router-dom';
-import Article from './Article';
-import uniqid from 'uniqid';
 import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import uniqid from 'uniqid';
+
+import cl from '../styles/CategoryPage.module.scss';
+
+import Article from './Article';
+import { saveSelectedPost } from '../redux/actions';
 
 const CategoryPage = (props) => {
   const { category } = useParams();
+  const dispatch = useDispatch();
 
   const news = useSelector((state) => state.news.newsByCategory);
 
   const categoryName = category.slice(0, -4);
+
+  // const handleSelectedPost = (id, item) => {
+  //   dispatch(saveSelectedPost(id, item));
+  // };
 
   return (
     <div className={cl.categoryPage}>
@@ -24,10 +32,10 @@ const CategoryPage = (props) => {
         {news.map((item) => {
           const posts =
             item.link === category
-              ? item.allNews.map((res) => {
+              ? item.categoryAllNews.map((res) => {
                   const id = uniqid();
                   return (
-                    <Link to={`${res.id}`} key={id}>
+                    <Link to={`${res.link}`} key={id}>
                       <Article title={res.title} image={res.imageUrl} />
                     </Link>
                   );
