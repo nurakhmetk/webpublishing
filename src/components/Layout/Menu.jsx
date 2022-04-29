@@ -25,6 +25,7 @@ const Menu = ({ menuActive, setMenuActive, isActive, setIsActive }) => {
           offset={-100}
           duration={900}
           className={cl.navText}
+          onClick={() => setMenuActive(false)}
         >
           Contacts
         </ScrollLink>
