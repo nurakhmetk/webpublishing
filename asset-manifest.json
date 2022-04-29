@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/webpublishing/static/css/main.6a4b9051.css",
-    "main.js": "/webpublishing/static/js/main.cdbc35e0.js",
+    "main.css": "/webpublishing/static/css/main.8128e614.css",
+    "main.js": "/webpublishing/static/js/main.e870bcbc.js",
     "static/js/787.5fb0d84d.chunk.js": "/webpublishing/static/js/787.5fb0d84d.chunk.js",
     "static/media/OpenSans-ExtraBold.ttf": "/webpublishing/static/media/OpenSans-ExtraBold.312244ca5ea57843f749.ttf",
     "static/media/OpenSans-Regular.ttf": "/webpublishing/static/media/OpenSans-Regular.d7d7b8359eeb9cddfba6.ttf",
@@ -11,12 +11,12 @@
     "static/media/BebasNeue-Regular.ttf": "/webpublishing/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "index.html": "/webpublishing/index.html",
     "static/media/arrownew.svg": "/webpublishing/static/media/arrownew.d4e0430376c86479b3a31e870e009807.svg",
-    "main.6a4b9051.css.map": "/webpublishing/static/css/main.6a4b9051.css.map",
-    "main.cdbc35e0.js.map": "/webpublishing/static/js/main.cdbc35e0.js.map",
+    "main.8128e614.css.map": "/webpublishing/static/css/main.8128e614.css.map",
+    "main.e870bcbc.js.map": "/webpublishing/static/js/main.e870bcbc.js.map",
     "787.5fb0d84d.chunk.js.map": "/webpublishing/static/js/787.5fb0d84d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a4b9051.css",
-    "static/js/main.cdbc35e0.js"
+    "static/css/main.8128e614.css",
+    "static/js/main.e870bcbc.js"
   ]
 }
